@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="description" content="Ice Fishing Master — an indie project by Medi-Kam. Roadmap, transparency and future monetization plans." />
+  <title>Ice Fishing Master • About & Roadmap</title>
+
+  <style>
+    :root{
+      --bg0:#050710;
+      --bg1:#0b1231;
+      --card: rgba(255,255,255,.05);
+      --stroke: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.93);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.56);
+      --ice:#6ad7ff;
+      --vio:#9a7dff;
+      --mint:#66f2c2;
+      --sun:#ffd36a;
+      --shadow: 0 16px 55px rgba(0,0,0,.52);
+      --r: 24px;
+    }
+
+    *{ box-sizing:border-box; }
+    body{
+      margin:0; min-height:100vh;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial;
+      color: var(--text);
+      background:
+        radial-gradient(980px 620px at 15% 0%, rgba(106,215,255,.18), transparent 62%),
+        radial-gradient(980px 620px at 85% 0%, rgba(154,125,255,.16), transparent 62%),
+        radial-gradient(980px 620px at 55% 90%, rgba(102,242,194,.10), transparent 58%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    .wrap{ max-width: 1100px; margin:0 auto; padding: 22px 16px 58px; }
+
+    .hero{
+      border:1px solid var(--stroke);
+      border-radius: var(--r);
+      background: linear-gradient(180deg, rgba(255,255,255,.07), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      position:relative;
+      overflow:hidden;
+      padding: 22px;
+    }
+
+    .aurora{
+      position:absolute;
+      inset:-120px -160px auto -160px;
+      height: 340px;
+      background:
+        radial-gradient(closest-side at 20% 40%, rgba(106,215,255,.28), transparent 66%),
+        radial-gradient(closest-side at 52% 30%, rgba(154,125,255,.22), transparent 66%),
+        radial-gradient(closest-side at 85% 45%, rgba(102,242,194,.16), transparent 66%);
+      filter: blur(18px);
+      opacity:.75;
+      pointer-events:none;
+      animation: floaty 9s ease-in-out infinite alternate;
+      mask-image: radial-gradient(closest-side at 50% 35%, #000 55%, transparent 82%);
+    }
+    @keyframes floaty{
+      from{ transform: translate3d(0,0,0) rotate(-1deg); }
+      to{ transform: translate3d(16px,10px,0) rotate(1deg); }
+    }
+
+    .topline{
+      display:flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items:flex-start;
+      flex-wrap: wrap;
+      position:relative;
+      z-index:1;
+    }
+
+    .id{
+      display:flex; gap: 14px; align-items:flex-start;
+    }
+    .mark{
+      width: 48px; height:48px; border-radius: 16px;
+      border:1px solid rgba(255,255,255,.16);
+      background:
+        radial-gradient(16px 16px at 32% 28%, rgba(255,255,255,.72), rgba(255,255,255,0) 70%),
+        radial-gradient(22px 22px at 70% 30%, rgba(106,215,255,.85), rgba(106,215,255,0) 70%),
+        radial-gradient(28px 28px at 42% 78%, rgba(154,125,255,.65), rgba(154,125,255,0) 72%),
+        linear-gradient(135deg, rgba(255,255,255,.10), rgba(255,255,255,.03));
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      flex: 0 0 auto;
+    }
+
+    h1{ margin:0; font-size: clamp(22px, 5vw, 40px); letter-spacing:.2px; }
+    .sub{ margin:8px 0 0; color: var(--muted); font-size: 14px; line-height:1.55; max-width: 72ch; }
+
+    .nav{
+      display:flex; gap: 10px; flex-wrap:wrap;
+      align-items:center;
+    }
+    a.btn{
+      display:inline-flex; gap:10px; align-items:center;
+      padding: 11px 14px;
+      border-radius: 14px;
+      text-decoration:none;
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      border:1px solid rgba(255,255,255,.14);
+      font-weight: 650;
+      font-size: 14px;
+      transition: transform .08s ease, filter .15s ease;
+    }
+    a.btn:active{ transform: translateY(1px) scale(.99); }
+    a.primary{
+      border:0;
+      color:#071018;
+      background: linear-gradient(135deg, var(--ice), var(--mint));
+      box-shadow: 0 14px 30px rgba(106,215,255,.18);
+    }
+
+    .cards{
+      margin-top: 16px;
+      display:grid;
+      grid-template-columns: 1.1fr .9fr;
+      gap: 14px;
+    }
+    @media (max-width: 920px){
+      .cards{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      border:1px solid var(--stroke);
+      border-radius: var(--r);
+      background: var(--card);
+      box-shadow: 0 12px 32px rgba(0,0,0,.40);
+      padding: 18px;
+      position:relative;
+      overflow:hidden;
+    }
+
+    h2{ margin:0 0 10px; font-size: 16px; }
+    p{ margin:0; color: var(--muted); font-size: 14px; line-height:1.72; }
+    ul{ margin: 10px 0 0 18px; color: var(--muted); font-size:14px; line-height:1.72; }
+
+    .chips{ display:flex; flex-wrap:wrap; gap:10px; margin-top: 12px; }
+    .chip{
+      padding: 8px 12px;
+      border-radius: 999px;
+      border:1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.12);
+      font-size: 13px;
+      color: rgba(255,255,255,.82);
+      user-select:none;
+      display:inline-flex; align-items:center; gap:8px;
+    }
+    .spark{ width:9px; height:9px; border-radius: 99px; background: var(--sun); box-shadow: 0 0 0 4px rgba(255,211,106,.12); }
+
+    .roadmap{
+      margin-top: 10px;
+      display:grid;
+      gap: 10px;
+    }
+    .step{
+      border: 1px solid rgba(255,255,255,.14);
+      background: rgba(255,255,255,.04);
+      border-radius: 18px;
+      padding: 12px 12px;
+      display:flex;
+      gap: 12px;
+      align-items:flex-start;
+    }
+    .num{
+      width: 28px; height: 28px;
+      border-radius: 10px;
+      display:grid; place-items:center;
+      font-weight: 800;
+      color: #071018;
+      background: linear-gradient(135deg, var(--vio), var(--ice));
+      flex: 0 0 auto;
+    }
+    .step b{ color: rgba(255,255,255,.92); }
+    .fine{
+      margin-top: 12px;
+      color: var(--muted2);
+      font-size: 12px;
+      line-height:1.65;
+    }
+    footer{
+      margin-top: 18px;
+      text-align:center;
+      color: var(--muted2);
+      font-size: 12px;
+    }
+    code{ color:#fff; background: rgba(255,255,255,.08); padding:2px 6px; border-radius:8px; }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <section class="hero">
+      <div class="aurora" aria-hidden="true"></div>
+
+      <div class="topline">
+        <div class="id">
+          <div class="mark" aria-hidden="true"></div>
+          <div>
+            <h1>Ice Fishing Master</h1>
+            <p class="sub">
+              Built by <strong>Medi-Kam</strong> — a beginner indie developer focused on making a helpful and fun fishing experience.
+              This page is here for transparency: who I am, how the app is maintained, and what’s planned next.
+            </p>
+          </div>
+        </div>
+
+        <nav class="nav" aria-label="Links">
+          <a class="btn primary" href="mailto:lerimecesep214@gmail.com?subject=Ice%20Fishing%20Master%20-%20Feedback">
+            ✉️ Send feedback
+          </a>
+          <a class="btn" href="support.html">Support</a>
+          <a class="btn" href="privacy.html">Privacy Policy</a>
+        </nav>
+      </div>
+    </section>
+
+    <section class="cards" aria-label="Marketing content">
+      <div class="card">
+        <h2>About the developer</h2>
+        <p>
+          I’m <strong>Medi-Kam</strong>, a starting developer. I actively improve the app and listen to user feedback.
+          My goal is to create real value: stability, clarity, and a smooth experience.
+        </p>
+
+        <div class="chips" aria-label="Highlights">
+          <span class="chip"><span class="spark"></span> Transparent communication</span>
+          <span class="chip"><span class="spark"></span> Frequent improvements</span>
+          <span class="chip"><span class="spark"></span> User-first approach</span>
+        </div>
+
+        <h2 style="margin-top:14px;">Monetization status</h2>
+        <p>
+          Right now <strong>Ice Fishing Master</strong> has <strong>no paid features</strong> and <strong>no subscriptions</strong>.
+          In the future, I plan to introduce optional monetization (for example: extra content or premium tools)
+          to support ongoing development and earn income — while keeping the core experience accessible.
+        </p>
+
+        <p class="fine">
+          Important: I do not use advertising trackers. Also see the <a href="privacy.html" style="color:rgba(255,255,255,.88)">Privacy Policy</a>.
+        </p>
+      </div>
+
+      <div class="card">
+        <h2>Roadmap (planned)</h2>
+        <div class="roadmap">
+          <div class="step">
+            <div class="num">1</div>
+            <div>
+              <b>Polish & stability</b><br/>
+              <span style="color:rgba(255,255,255,.72);font-size:14px;line-height:1.65;">
+                Fix bugs, improve performance, and make the experience smoother on more devices.
+              </span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">2</div>
+            <div>
+              <b>More value inside the app</b><br/>
+              <span style="color:rgba(255,255,255,.72);font-size:14px;line-height:1.65;">
+                Add useful features and better in-app guidance for players.
+              </span>
+            </div>
+          </div>
+          <div class="step">
+            <div class="num">3</div>
+            <div>
+              <b>Optional premium features</b><br/>
+              <span style="color:rgba(255,255,255,.72);font-size:14px;line-height:1.65;">
+                Introduce optional paid additions (no forced subscription) so the project can grow sustainably.
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <h2 style="margin-top:14px;">Developer details</h2>
+        <ul>
+          <li><strong>Developer:</strong> Medi-Kam</li>
+          <li><strong>App:</strong> Ice Fishing Master</li>
+          <li><strong>Contact:</strong> <a href="mailto:lerimecesep214@gmail.com" style="color:rgba(255,255,255,.88)">lerimecesep214@gmail.com</a></li>
+        </ul>
+
+        <p class="fine">
+          Last updated: <span id="updated"></span>
+        </p>
+      </div>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Medi-Kam • Ice Fishing Master
+    </footer>
+  </div>
+
+  <script>
+    (function(){
+      const d = new Date();
+      document.getElementById("year").textContent = String(d.getFullYear());
+      const fmt = new Intl.DateTimeFormat("en-US", { year:"numeric", month:"long", day:"2-digit" });
+      document.getElementById("updated").textContent = fmt.format(d);
+    })();
+  </script>
+</body>
+</html>
