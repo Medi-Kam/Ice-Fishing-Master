@@ -1,0 +1,410 @@
+ <!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="color-scheme" content="dark light" />
+  <meta name="description" content="Privacy Policy for Ice Fishing Master by Medi-Kam." />
+  <title>Privacy Policy • Ice Fishing Master</title>
+
+  <style>
+    :root{
+      --bg0:#06080f;
+      --bg1:#0b1022;
+      --card: rgba(255,255,255,.06);
+      --stroke: rgba(255,255,255,.12);
+      --text: rgba(255,255,255,.92);
+      --muted: rgba(255,255,255,.72);
+      --muted2: rgba(255,255,255,.56);
+      --good:#66f2c2;
+      --ice:#6ad7ff;
+      --ice2:#9a7dff;
+      --warn:#ffd36a;
+      --shadow: 0 14px 45px rgba(0,0,0,.45);
+      --radius: 22px;
+    }
+
+    *{ box-sizing: border-box; }
+    html,body{ height:100%; }
+    body{
+      margin:0;
+      font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, "Noto Sans", "Apple Color Emoji","Segoe UI Emoji";
+      color: var(--text);
+      background:
+        radial-gradient(900px 600px at 20% 10%, rgba(106,215,255,.18), transparent 60%),
+        radial-gradient(900px 600px at 80% 0%, rgba(154,125,255,.16), transparent 60%),
+        radial-gradient(900px 600px at 60% 80%, rgba(102,242,194,.10), transparent 55%),
+        linear-gradient(180deg, var(--bg0), var(--bg1));
+      overflow-x:hidden;
+    }
+
+    .wrap{
+      max-width: 1020px;
+      margin: 0 auto;
+      padding: 24px 16px 56px;
+    }
+
+    header{
+      position: relative;
+      padding: 28px 18px 18px;
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      background: linear-gradient(180deg, rgba(255,255,255,.06), rgba(255,255,255,.03));
+      box-shadow: var(--shadow);
+      overflow:hidden;
+    }
+
+    .brand{
+      display:flex;
+      align-items:center;
+      gap: 14px;
+    }
+    .logo{
+      width: 44px;
+      height: 44px;
+      border-radius: 14px;
+      border: 1px solid rgba(255,255,255,.16);
+      background:
+        radial-gradient(12px 12px at 30% 30%, rgba(255,255,255,.8), rgba(255,255,255,0) 65%),
+        radial-gradient(22px 22px at 70% 30%, rgba(106,215,255,.9), rgba(106,215,255,0) 70%),
+        radial-gradient(28px 28px at 40% 75%, rgba(154,125,255,.7), rgba(154,125,255,0) 70%),
+        linear-gradient(135deg, rgba(255,255,255,.08), rgba(255,255,255,.02));
+      box-shadow: 0 10px 25px rgba(0,0,0,.35);
+      position: relative;
+    }
+    .logo:after{
+      content:"";
+      position:absolute;
+      inset:-25px;
+      background: conic-gradient(from 180deg, rgba(106,215,255,.0), rgba(106,215,255,.18), rgba(154,125,255,.0));
+      filter: blur(18px);
+      opacity:.7;
+      z-index:-1;
+    }
+
+    h1{
+      margin:0;
+      font-size: clamp(20px, 4.5vw, 34px);
+      letter-spacing: .2px;
+    }
+    .sub{
+      margin: 6px 0 0;
+      color: var(--muted);
+      font-size: 14px;
+      line-height: 1.4;
+    }
+
+    .grid{
+      display:grid;
+      grid-template-columns: 1.2fr .8fr;
+      gap: 16px;
+      margin-top: 16px;
+    }
+    @media (max-width: 860px){
+      .grid{ grid-template-columns: 1fr; }
+    }
+
+    .card{
+      border: 1px solid var(--stroke);
+      border-radius: var(--radius);
+      background: rgba(255,255,255,.04);
+      box-shadow: 0 12px 30px rgba(0,0,0,.35);
+      padding: 18px;
+    }
+
+    .card h2{
+      margin: 0 0 10px;
+      font-size: 16px;
+      letter-spacing: .2px;
+    }
+
+    .pillrow{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 10px;
+    }
+    .pill{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding: 8px 12px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.16);
+      background: rgba(0,0,0,.12);
+      color: var(--muted);
+      font-size: 13px;
+      line-height: 1;
+      user-select:none;
+    }
+    .dot{
+      width: 8px; height: 8px; border-radius: 99px;
+      background: var(--good);
+      box-shadow: 0 0 0 4px rgba(102,242,194,.12);
+    }
+
+    ul{
+      margin: 10px 0 0 18px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 14px;
+    }
+
+    .notice{
+      margin-top: 12px;
+      padding: 12px 12px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.14);
+      background: linear-gradient(180deg, rgba(106,215,255,.10), rgba(154,125,255,.06));
+      color: rgba(255,255,255,.86);
+      font-size: 14px;
+      line-height: 1.55;
+    }
+
+    .actions{
+      display:flex;
+      flex-wrap:wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+    .btn{
+      appearance:none;
+      border: 0;
+      border-radius: 14px;
+      padding: 12px 14px;
+      font-weight: 650;
+      font-size: 14px;
+      cursor:pointer;
+      transition: transform .08s ease, filter .15s ease;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      text-decoration:none;
+    }
+    .btn:active{ transform: translateY(1px) scale(.99); }
+
+    .btn-primary{
+      color: #071018;
+      background: linear-gradient(135deg, var(--ice), var(--good));
+      box-shadow: 0 14px 30px rgba(106,215,255,.18);
+    }
+    .btn-ghost{
+      color: var(--text);
+      background: rgba(255,255,255,.06);
+      border: 1px solid rgba(255,255,255,.14);
+    }
+
+    .small{
+      color: var(--muted2);
+      font-size: 12px;
+      margin-top: 10px;
+      line-height: 1.6;
+    }
+
+    footer{
+      margin-top: 16px;
+      color: var(--muted2);
+      font-size: 12px;
+      text-align:center;
+      opacity:.9;
+    }
+
+    .toast{
+      position: fixed;
+      left: 50%;
+      bottom: 16px;
+      transform: translateX(-50%);
+      width: min(680px, calc(100% - 22px));
+      padding: 12px 14px;
+      border-radius: 16px;
+      border: 1px solid rgba(255,255,255,.18);
+      background: rgba(10,14,24,.82);
+      backdrop-filter: blur(10px);
+      box-shadow: var(--shadow);
+      display:none;
+      gap: 10px;
+      align-items:flex-start;
+      color: rgba(255,255,255,.90);
+      font-size: 13px;
+      line-height: 1.35;
+    }
+    .toast strong{ color: #fff; }
+    .toast .tag{
+      padding: 2px 8px;
+      border-radius: 999px;
+      border: 1px solid rgba(255,255,255,.18);
+      color: var(--warn);
+      font-size: 12px;
+      line-height: 1.8;
+      white-space:nowrap;
+    }
+
+    /* subtle animated ice lines */
+    .frost{
+      position:absolute;
+      inset:-80px -120px auto -120px;
+      height: 240px;
+      background:
+        radial-gradient(closest-side, rgba(255,255,255,.06), transparent 70%) 0 0/140px 140px,
+        linear-gradient(90deg, rgba(106,215,255,.10), transparent 60%),
+        linear-gradient(135deg, rgba(154,125,255,.09), transparent 55%);
+      filter: blur(0px);
+      opacity:.65;
+      pointer-events:none;
+      mask-image: radial-gradient(closest-side at 50% 30%, #000 45%, transparent 78%);
+      animation: drift 10s ease-in-out infinite alternate;
+    }
+    @keyframes drift{
+      from{ transform: translate3d(0,0,0) rotate(-1deg); }
+      to{ transform: translate3d(12px,6px,0) rotate(1deg); }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="wrap">
+    <header>
+      <div class="frost" aria-hidden="true"></div>
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <h1>Privacy Policy</h1>
+          <p class="sub">
+            App: <strong>Ice Fishing Master</strong> • Developer: <strong>Medi-Kam</strong><br/>
+            Contact: <a href="mailto:lerimecesep214@gmail.com" style="color:rgba(255,255,255,.88)">lerimecesep214@gmail.com</a>
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <section class="grid" aria-label="Privacy policy content">
+      <div class="card">
+        <h2>Our privacy approach</h2>
+        <div class="pillrow">
+          <span class="pill"><span class="dot"></span> No data collection</span>
+          <span class="pill"><span class="dot"></span> No data storage</span>
+          <span class="pill"><span class="dot"></span> No data sharing</span>
+        </div>
+
+        <div class="notice">
+          <strong>Ice Fishing Master</strong> does <strong>not</strong> collect, store, sell, or share any personal data.
+          We do not use analytics, advertising identifiers, third-party SDK trackers, or profiling tools.
+        </div>
+
+        <h2 style="margin-top:14px;">What the app does NOT do</h2>
+        <ul>
+          <li>No account registration.</li>
+          <li>No collection of device identifiers.</li>
+          <li>No tracking across apps or websites.</li>
+          <li>No sharing with third parties.</li>
+          <li>No sale of data.</li>
+        </ul>
+
+        <h2 style="margin-top:14px;">Contact</h2>
+        <p style="margin:0;color:var(--muted);font-size:14px;line-height:1.7;">
+          If you have any privacy questions, email:
+          <a href="mailto:lerimecesep214@gmail.com" style="color:rgba(255,255,255,.90)">lerimecesep214@gmail.com</a>
+        </p>
+
+        <div class="actions">
+          <!-- Close WebView button -->
+          <button class="btn btn-primary" type="button" onclick="requestCloseWebView()">
+            ✕ Close WebView
+          </button>
+          <a class="btn btn-ghost" href="support.html" rel="noopener">
+            Support
+          </a>
+          <a class="btn btn-ghost" href="marketing.html" rel="noopener">
+            About & Roadmap
+          </a>
+        </div>
+
+        <p class="small">
+          Effective date: <span id="effectiveDate"></span><br/>
+          This page is provided for transparency to users and Google Play reviewers.
+        </p>
+      </div>
+
+      <aside class="card">
+        <h2>Developer details</h2>
+        <ul>
+          <li><strong>Developer name:</strong> Medi-Kam</li>
+          <li><strong>App name:</strong> Ice Fishing Master</li>
+          <li><strong>Support email:</strong> lerimecesep214@gmail.com</li>
+        </ul>
+
+        <h2 style="margin-top:14px;">WebView close request (stub)</h2>
+        <p style="margin:0;color:var(--muted);font-size:14px;line-height:1.65;">
+          The <strong>Close WebView</strong> button calls the function
+          <code style="color:#fff;background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px;">requestCloseWebView()</code>.
+          It sends a <strong>POST</strong> request to a local stub endpoint:
+          <code style="color:#fff;background:rgba(255,255,255,.08);padding:2px 6px;border-radius:8px;">/webview/close</code>.
+          Your app can intercept this request in WebView and close the screen.
+        </p>
+
+        <p class="small">
+          If the endpoint is not handled, the request fails silently and shows a small toast — safe for GitHub Pages.
+        </p>
+      </aside>
+    </section>
+
+    <footer>
+      © <span id="year"></span> Medi-Kam • Ice Fishing Master
+    </footer>
+  </div>
+
+  <div class="toast" id="toast" role="status" aria-live="polite">
+    <span class="tag">INFO</span>
+    <div>
+      <strong id="toastTitle">Request sent</strong><br/>
+      <span id="toastMsg">The WebView close request was sent to the local stub endpoint.</span>
+    </div>
+  </div>
+
+  <script>
+    // Sets the visible dates
+    (function initDates(){
+      const d = new Date();
+      document.getElementById("year").textContent = String(d.getFullYear());
+      // Effective date: today's date in a reviewer-friendly format
+      const fmt = new Intl.DateTimeFormat("en-US", { year:"numeric", month:"long", day:"2-digit" });
+      document.getElementById("effectiveDate").textContent = fmt.format(d);
+    })();
+
+    function showToast(title, msg){
+      const t = document.getElementById("toast");
+      document.getElementById("toastTitle").textContent = title;
+      document.getElementById("toastMsg").textContent = msg;
+      t.style.display = "flex";
+      clearTimeout(window.__toastTimer);
+      window.__toastTimer = setTimeout(() => { t.style.display = "none"; }, 3600);
+    }
+
+    /**
+     * requestCloseWebView()
+     * Called by the "Close WebView" button.
+     * Sends a POST request to a local stub endpoint "/webview/close".
+     *
+     * In a native Android WebView, you can intercept this URL and close the WebView screen.
+     * (Example: shouldInterceptRequest / WebViewClient, or JS bridge alternative).
+     */
+    async function requestCloseWebView(){
+      try{
+        await fetch("/webview/close", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({
+            app: "Ice Fishing Master",
+            developer: "Medi-Kam",
+            action: "close_webview",
+            ts: Date.now()
+          })
+        });
+        showToast("Request sent", "Close WebView request was posted to /webview/close (stub).");
+      }catch(e){
+        showToast("Stub endpoint not available", "This is expected on GitHub Pages. Your app can intercept /webview/close inside WebView.");
+      }
+    }
+  </script>
+</body>
+</html>
