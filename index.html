@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#08111f">
+  <meta name="description" content="Ice Fishing Master official developer pages by Medi-Kam.">
+  <title>Ice Fishing Master — Home</title>
+  <style>
+:root{
+  --bg:#08111f;
+  --bg2:#0e1a2f;
+  --card:rgba(255,255,255,0.08);
+  --line:rgba(255,255,255,0.14);
+  --text:#eef6ff;
+  --muted:#b5c7dd;
+  --accent:#7de3ff;
+  --accent2:#95ffa4;
+  --glow:0 0 30px rgba(125,227,255,.18);
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;
+  color:var(--text);
+  background:
+    radial-gradient(circle at 20% 0%, rgba(125,227,255,.14), transparent 30%),
+    radial-gradient(circle at 80% 10%, rgba(149,255,164,.10), transparent 28%),
+    linear-gradient(180deg,var(--bg),#07101b 45%, #050b14 100%);
+  min-height:100vh;
+}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.shell{width:min(1100px,calc(100% - 28px));margin:0 auto}
+.topbar{
+  position:sticky;top:0;z-index:50;
+  backdrop-filter: blur(12px);
+  background:rgba(4,10,18,.58);
+  border-bottom:1px solid var(--line);
+}
+.nav{
+  display:flex;align-items:center;justify-content:space-between;
+  gap:18px;padding:14px 0;
+}
+.brand{
+  display:flex;align-items:center;gap:12px;font-weight:800;letter-spacing:.02em
+}
+.logo{
+  width:42px;height:42px;border-radius:14px;
+  background:linear-gradient(135deg,#92f0ff,#5eb8ff 45%,#b6ffe8);
+  box-shadow:0 10px 30px rgba(94,184,255,.35), inset 0 1px 0 rgba(255,255,255,.35);
+  position:relative;overflow:hidden;
+}
+.logo:before{
+  content:"";position:absolute;inset:8px;border-radius:10px;
+  background:linear-gradient(180deg,rgba(255,255,255,.85),rgba(255,255,255,.18));
+  clip-path:polygon(48% 0,100% 30%,72% 100%,17% 74%,0 28%);
+}
+.links{display:flex;flex-wrap:wrap;gap:10px}
+.links a{
+  padding:10px 14px;border:1px solid var(--line);border-radius:999px;
+  color:var(--text);background:rgba(255,255,255,.04)
+}
+.hero{padding:36px 0 18px}
+.hero-grid{
+  display:grid;grid-template-columns:1.2fr .8fr;gap:22px;align-items:stretch
+}
+.panel{
+  border:1px solid var(--line);
+  background:linear-gradient(180deg,rgba(255,255,255,.08),rgba(255,255,255,.04));
+  border-radius:28px;
+  box-shadow:var(--glow);
+}
+.main-card{padding:28px}
+.kicker{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:8px 12px;border-radius:999px;
+  border:1px solid rgba(125,227,255,.25);
+  background:rgba(125,227,255,.08);color:#dffaff;font-size:.92rem
+}
+h1{
+  font-size:clamp(2rem,7vw,4.2rem);line-height:.96;margin:16px 0 14px;
+  letter-spacing:-.04em
+}
+.subtitle{font-size:1.06rem;line-height:1.7;color:var(--muted);max-width:60ch}
+.cta-row{display:flex;flex-wrap:wrap;gap:12px;margin-top:22px}
+.btn{
+  display:inline-flex;align-items:center;justify-content:center;gap:10px;
+  padding:13px 18px;border-radius:16px;border:1px solid var(--line);
+  background:rgba(255,255,255,.06);color:var(--text);font-weight:700
+}
+.btn.primary{
+  background:linear-gradient(135deg,rgba(125,227,255,.22),rgba(149,255,164,.18));
+}
+.stats{padding:22px;display:grid;gap:14px}
+.stat{
+  padding:16px;border-radius:20px;background:rgba(255,255,255,.05);border:1px solid var(--line)
+}
+.stat strong{display:block;font-size:1.35rem;margin-bottom:5px}
+.section{padding:18px 0 48px}
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{padding:22px}
+.card h3{margin:0 0 10px;font-size:1.08rem}
+.card p,.card li{color:var(--muted);line-height:1.7}
+.card ul{padding-left:18px;margin:10px 0 0}
+.badge{
+  display:inline-block;padding:7px 10px;border-radius:999px;
+  border:1px solid var(--line);background:rgba(255,255,255,.05);font-size:.9rem
+}
+.footer{
+  padding:22px 0 40px;color:var(--muted);font-size:.95rem
+}
+.footer-box{
+  display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
+  padding:18px 20px;border:1px solid var(--line);border-radius:22px;
+  background:rgba(255,255,255,.04)
+}
+.wave{
+  position:relative;overflow:hidden;
+}
+.wave:after{
+  content:"";position:absolute;right:-80px;top:-80px;width:220px;height:220px;border-radius:50%;
+  background:radial-gradient(circle, rgba(125,227,255,.26), transparent 68%);
+  pointer-events:none;
+}
+.small{font-size:.95rem}
+.highlight{color:#f0fdff}
+.notice{
+  margin-top:14px;padding:14px 16px;border-radius:18px;
+  border:1px solid rgba(149,255,164,.22);background:rgba(149,255,164,.08)
+}
+@media (max-width:860px){
+  .hero-grid,.grid-3{grid-template-columns:1fr}
+  .nav{align-items:flex-start;flex-direction:column}
+  .links{width:100%}
+}
+</style>
+</head>
+<body>
+  <header class="topbar">
+    <div class="shell nav">
+      <div class="brand">
+        <div class="logo" aria-hidden="true"></div>
+        <div>
+          <div>Ice Fishing Master</div>
+          <div class="small" style="color:var(--muted)">by Medi-Kam</div>
+        </div>
+      </div>
+      <nav class="links"><a href="index.html" aria-current="page">Home</a><a href="privacy.html">Privacy Policy</a><a href="support.html">Support</a><a href="marketing.html">Marketing</a></nav>
+    </div>
+  </header>
+  
+<main class="shell">
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="panel main-card wave">
+        <span class="kicker">Official developer page</span>
+        <h1>Clear information for players and store reviewers.</h1>
+        <p class="subtitle">
+          Welcome to the official web pages for <strong>Ice Fishing Master</strong>. This site is designed to present
+          the app and the developer account in a simple, open, and trustworthy way for both users and Google Play reviewers.
+        </p>
+        <div class="cta-row">
+          <a class="btn primary" href="privacy.html">Read Privacy Policy</a>
+          <a class="btn" href="support.html">Open Support Page</a>
+          <a class="btn" href="marketing.html">View Marketing Info</a>
+        </div>
+        <div class="notice small">
+          This website is intentionally transparent: it shows the developer identity, support contact, privacy approach,
+          and product direction in one connected place.
+        </div>
+      </div>
+      <aside class="panel stats">
+        <div class="stat">
+          <strong>App</strong>
+          Ice Fishing Master
+        </div>
+        <div class="stat">
+          <strong>Developer</strong>
+          Medi-Kam
+        </div>
+        <div class="stat">
+          <strong>Account Contact</strong>
+          <a href="mailto:lerimecesep214@gmail.com">lerimecesep214@gmail.com</a>
+        </div>
+      </aside>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="grid-3">
+      <article class="panel card">
+        <span class="badge">About the developer</span>
+        <h3>Independent beginner developer</h3>
+        <p>
+          Medi-Kam is an early-stage independent developer focused on learning, improving product quality,
+          and creating useful entertainment experiences with honest presentation and careful iteration.
+        </p>
+      </article>
+
+      <article class="panel card">
+        <span class="badge">About the app</span>
+        <h3>Ice-themed fishing gameplay</h3>
+        <p>
+          Ice Fishing Master is presented as a fishing game experience built around accessibility,
+          simple interaction, and a style that can continue to grow with future updates and features.
+        </p>
+      </article>
+
+      <article class="panel card">
+        <span class="badge">Transparency</span>
+        <h3>Open account presentation</h3>
+        <p>
+          This site exists to give moderators and users a clear understanding of who develops the app,
+          how privacy is handled, how support works, and what the future monetization approach may look like.
+        </p>
+      </article>
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="panel card">
+      <h3>Quick links</h3>
+      <ul>
+        <li><a href="privacy.html">Privacy Policy</a> — explains that no user data is collected, stored, or shared.</li>
+        <li><a href="support.html">Support URL</a> — contact and support information for the application.</li>
+        <li><a href="marketing.html">Marketing URL</a> — developer story, product values, and future monetization plans.</li>
+      </ul>
+    </div>
+  </section>
+</main>
+
+  <footer class="footer">
+    <div class="shell footer-box">
+      <div>Developer: <span class="highlight">Medi-Kam</span></div>
+      <div>Contact: <a href="mailto:lerimecesep214@gmail.com">lerimecesep214@gmail.com</a></div>
+    </div>
+  </footer>
+</body>
+</html>
